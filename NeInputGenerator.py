@@ -44,14 +44,57 @@ class NeInputGenerator:
         self.OIT = 0.6059 #Outer instrument tube radius
 
         #Variables
-        self.NN = 24 #Number of nodes
-        self.NH = self.AH/self.NN #Height of a node
+        self._NN = 1 #Number of nodes
+        self._batches = 0
+        self._inactive = 0
+        self._particles = 0
 
         #Materials and Geometry
         self.cells = []
         self.tally_cells = []
         self.control_rod_list = [40, 43, 46, 55, 65, 88, 91, 94, 97, 100, 139, 142, 148, 151, 190, 193, 196, 199, 202, 225, 235, 244, 247, 250]
         self.instrument_tube_list = [145]
+
+    @property
+    def NN(self):
+        return self._NN
+
+    @NN.setter
+    def NN(self, value):
+        if value <= 0:
+            raise ValueError("NN must be > 0")
+        self._NN = value
+
+    @property
+    def batches(self):
+        return self._batches
+
+    @batches.setter
+    def batches(self, value):
+        if value <= 0:
+            raise ValueError("batches must be > 0")
+        self._batches = value
+
+    @property
+    def inactive(self):
+        return self._inactive
+
+    @inactive.setter
+    def inactive(self, value):
+        if value < 0:
+            raise ValueError("inactive must be >= 0")
+        self._inactive = value
+
+    @property
+    def particles(self):
+        return self._particles
+
+    @particles.setter
+    def particles(self, value):
+        if value <= 0:
+            raise ValueError("particles must be >0")
+        self._particles = value
+
 
     def run(self):
         start=time.time()
@@ -92,7 +135,7 @@ class NeInputGenerator:
         IIT = self.IIT
         IOT = self.OIT
         NN = self.NN 
-        NH = self.NH 
+        NH = self.AH/self._NN #Height of a node
 
         cells = self.cells
         tally_cells = self.tally_cells
@@ -181,13 +224,16 @@ class NeInputGenerator:
 
         assembly_univ = openmc.Universe(name="assembly", cells=cells)
 
-        world = openmc.model.RectangularParallelepiped(
-            AG, CP*17+AG,   # x min/max
-            AG, CP*17+AG,   # y min/max
-            0, AH,   # z min/max
-            boundary_type="reflective")
+        topboundary = openmc.ZPlane(z0=AH, boundary_type="vacuum")
+        bottomboundary = openmc.ZPlane(z0=0, boundary_type="vacuum")
+        northboundary = openmc.YPlane(y0=AG+CP*17, boundary_type="reflective") 
+        southboundary = openmc.YPlane(y0=AG, boundary_type="reflective") 
+        eastboundary = openmc.XPlane(x0=AG+CP*17, boundary_type="reflective")
+        westboundary = openmc.XPlane(x0=AG, boundary_type="reflective")
 
-        root_cell = openmc.Cell(name="root", region=-world, fill=assembly_univ)
+        boundary = (+southboundary & -northboundary & +westboundary  & -eastboundary  & +bottomboundary & -topboundary) 
+
+        root_cell = openmc.Cell(name="root", region=boundary, fill=assembly_univ)
 
         geom = openmc.Geometry([root_cell])
         mats.export_to_xml(results_dir)
@@ -209,6 +255,9 @@ class NeInputGenerator:
         CP = self.CP 
         AG = self.AG
         results_dir = self.results_dir
+        batches = self.batches
+        inactive = self.inactive
+        particles = self.particles
 
         settings = openmc.Settings()
 
@@ -219,9 +268,9 @@ class NeInputGenerator:
         settings.source = src
 
         self.settings = settings
-        settings.batches = 100
-        settings.inactive = 10
-        settings.particles = 1000
+        settings._batches = batches
+        settings._inactive = inactive
+        settings._particles = particles
         settings.summary = False
         settings.export_to_xml(results_dir)
 

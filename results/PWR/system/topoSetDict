@@ -1,0 +1,6369 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+actions
+(
+  {
+    name    fuel_0_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .00671250000000000000);
+      p2      (1.0 .00671250000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_0_cells;
+    }
+  }
+  {
+    name    fuel_0_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .01933050000000000000);
+      p2      (1.0 .00671250000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_1_cells;
+    }
+  }
+  {
+    name    fuel_0_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .03194850000000000000);
+      p2      (1.0 .00671250000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_2_cells;
+    }
+  }
+  {
+    name    fuel_0_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .04456650000000000000);
+      p2      (1.0 .00671250000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_3_cells;
+    }
+  }
+  {
+    name    fuel_0_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .05718450000000000000);
+      p2      (1.0 .00671250000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_4_cells;
+    }
+  }
+  {
+    name    fuel_0_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .06980250000000000000);
+      p2      (1.0 .00671250000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_5_cells;
+    }
+  }
+  {
+    name    fuel_0_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .08242050000000000000);
+      p2      (1.0 .00671250000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_6_cells;
+    }
+  }
+  {
+    name    fuel_0_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .09503850000000000000);
+      p2      (1.0 .00671250000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_7_cells;
+    }
+  }
+  {
+    name    fuel_0_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .10765650000000000000);
+      p2      (1.0 .00671250000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_8_cells;
+    }
+  }
+  {
+    name    fuel_0_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .12027450000000000000);
+      p2      (1.0 .00671250000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_9_cells;
+    }
+  }
+  {
+    name    fuel_0_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .13289250000000000000);
+      p2      (1.0 .00671250000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_10_cells;
+    }
+  }
+  {
+    name    fuel_0_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .14551050000000000000);
+      p2      (1.0 .00671250000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_11_cells;
+    }
+  }
+  {
+    name    fuel_0_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .15812850000000000000);
+      p2      (1.0 .00671250000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_12_cells;
+    }
+  }
+  {
+    name    fuel_0_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .17074650000000000000);
+      p2      (1.0 .00671250000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_13_cells;
+    }
+  }
+  {
+    name    fuel_0_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .18336450000000000000);
+      p2      (1.0 .00671250000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_14_cells;
+    }
+  }
+  {
+    name    fuel_0_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .19598250000000000000);
+      p2      (1.0 .00671250000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_15_cells;
+    }
+  }
+  {
+    name    fuel_0_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .00671250000000000000 .20860050000000000000);
+      p2      (1.0 .00671250000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_0_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_0_16_cells;
+    }
+  }
+  {
+    name    fuel_1_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .00671250000000000000);
+      p2      (1.0 .01933050000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_0_cells;
+    }
+  }
+  {
+    name    fuel_1_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .01933050000000000000);
+      p2      (1.0 .01933050000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_1_cells;
+    }
+  }
+  {
+    name    fuel_1_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .03194850000000000000);
+      p2      (1.0 .01933050000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_2_cells;
+    }
+  }
+  {
+    name    fuel_1_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .04456650000000000000);
+      p2      (1.0 .01933050000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_3_cells;
+    }
+  }
+  {
+    name    fuel_1_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .05718450000000000000);
+      p2      (1.0 .01933050000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_4_cells;
+    }
+  }
+  {
+    name    fuel_1_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .06980250000000000000);
+      p2      (1.0 .01933050000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_5_cells;
+    }
+  }
+  {
+    name    fuel_1_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .08242050000000000000);
+      p2      (1.0 .01933050000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_6_cells;
+    }
+  }
+  {
+    name    fuel_1_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .09503850000000000000);
+      p2      (1.0 .01933050000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_7_cells;
+    }
+  }
+  {
+    name    fuel_1_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .10765650000000000000);
+      p2      (1.0 .01933050000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_8_cells;
+    }
+  }
+  {
+    name    fuel_1_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .12027450000000000000);
+      p2      (1.0 .01933050000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_9_cells;
+    }
+  }
+  {
+    name    fuel_1_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .13289250000000000000);
+      p2      (1.0 .01933050000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_10_cells;
+    }
+  }
+  {
+    name    fuel_1_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .14551050000000000000);
+      p2      (1.0 .01933050000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_11_cells;
+    }
+  }
+  {
+    name    fuel_1_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .15812850000000000000);
+      p2      (1.0 .01933050000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_12_cells;
+    }
+  }
+  {
+    name    fuel_1_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .17074650000000000000);
+      p2      (1.0 .01933050000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_13_cells;
+    }
+  }
+  {
+    name    fuel_1_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .18336450000000000000);
+      p2      (1.0 .01933050000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_14_cells;
+    }
+  }
+  {
+    name    fuel_1_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .19598250000000000000);
+      p2      (1.0 .01933050000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_15_cells;
+    }
+  }
+  {
+    name    fuel_1_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .01933050000000000000 .20860050000000000000);
+      p2      (1.0 .01933050000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_1_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_1_16_cells;
+    }
+  }
+  {
+    name    fuel_2_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .00671250000000000000);
+      p2      (1.0 .03194850000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_0_cells;
+    }
+  }
+  {
+    name    fuel_2_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .01933050000000000000);
+      p2      (1.0 .03194850000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_1_cells;
+    }
+  }
+  {
+    name    fuel_2_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .03194850000000000000);
+      p2      (1.0 .03194850000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_2_cells;
+    }
+  }
+  {
+    name    fuel_2_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .04456650000000000000);
+      p2      (1.0 .03194850000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_3_cells;
+    }
+  }
+  {
+    name    fuel_2_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .05718450000000000000);
+      p2      (1.0 .03194850000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_4_cells;
+    }
+  }
+  {
+    name    fuel_2_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .06980250000000000000);
+      p2      (1.0 .03194850000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_5_cells;
+    }
+  }
+  {
+    name    fuel_2_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .08242050000000000000);
+      p2      (1.0 .03194850000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_6_cells;
+    }
+  }
+  {
+    name    fuel_2_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .09503850000000000000);
+      p2      (1.0 .03194850000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_7_cells;
+    }
+  }
+  {
+    name    fuel_2_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .10765650000000000000);
+      p2      (1.0 .03194850000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_8_cells;
+    }
+  }
+  {
+    name    fuel_2_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .12027450000000000000);
+      p2      (1.0 .03194850000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_9_cells;
+    }
+  }
+  {
+    name    fuel_2_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .13289250000000000000);
+      p2      (1.0 .03194850000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_10_cells;
+    }
+  }
+  {
+    name    fuel_2_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .14551050000000000000);
+      p2      (1.0 .03194850000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_11_cells;
+    }
+  }
+  {
+    name    fuel_2_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .15812850000000000000);
+      p2      (1.0 .03194850000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_12_cells;
+    }
+  }
+  {
+    name    fuel_2_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .17074650000000000000);
+      p2      (1.0 .03194850000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_13_cells;
+    }
+  }
+  {
+    name    fuel_2_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .18336450000000000000);
+      p2      (1.0 .03194850000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_14_cells;
+    }
+  }
+  {
+    name    fuel_2_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .19598250000000000000);
+      p2      (1.0 .03194850000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_15_cells;
+    }
+  }
+  {
+    name    fuel_2_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .03194850000000000000 .20860050000000000000);
+      p2      (1.0 .03194850000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_2_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_2_16_cells;
+    }
+  }
+  {
+    name    fuel_3_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .00671250000000000000);
+      p2      (1.0 .04456650000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_0_cells;
+    }
+  }
+  {
+    name    fuel_3_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .01933050000000000000);
+      p2      (1.0 .04456650000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_1_cells;
+    }
+  }
+  {
+    name    fuel_3_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .03194850000000000000);
+      p2      (1.0 .04456650000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_2_cells;
+    }
+  }
+  {
+    name    fuel_3_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .04456650000000000000);
+      p2      (1.0 .04456650000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_3_cells;
+    }
+  }
+  {
+    name    fuel_3_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .05718450000000000000);
+      p2      (1.0 .04456650000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_4_cells;
+    }
+  }
+  {
+    name    fuel_3_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .06980250000000000000);
+      p2      (1.0 .04456650000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_5_cells;
+    }
+  }
+  {
+    name    fuel_3_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .08242050000000000000);
+      p2      (1.0 .04456650000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_6_cells;
+    }
+  }
+  {
+    name    fuel_3_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .09503850000000000000);
+      p2      (1.0 .04456650000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_7_cells;
+    }
+  }
+  {
+    name    fuel_3_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .10765650000000000000);
+      p2      (1.0 .04456650000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_8_cells;
+    }
+  }
+  {
+    name    fuel_3_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .12027450000000000000);
+      p2      (1.0 .04456650000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_9_cells;
+    }
+  }
+  {
+    name    fuel_3_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .13289250000000000000);
+      p2      (1.0 .04456650000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_10_cells;
+    }
+  }
+  {
+    name    fuel_3_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .14551050000000000000);
+      p2      (1.0 .04456650000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_11_cells;
+    }
+  }
+  {
+    name    fuel_3_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .15812850000000000000);
+      p2      (1.0 .04456650000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_12_cells;
+    }
+  }
+  {
+    name    fuel_3_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .17074650000000000000);
+      p2      (1.0 .04456650000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_13_cells;
+    }
+  }
+  {
+    name    fuel_3_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .18336450000000000000);
+      p2      (1.0 .04456650000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_14_cells;
+    }
+  }
+  {
+    name    fuel_3_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .19598250000000000000);
+      p2      (1.0 .04456650000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_15_cells;
+    }
+  }
+  {
+    name    fuel_3_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .04456650000000000000 .20860050000000000000);
+      p2      (1.0 .04456650000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_3_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_3_16_cells;
+    }
+  }
+  {
+    name    fuel_4_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .00671250000000000000);
+      p2      (1.0 .05718450000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_0_cells;
+    }
+  }
+  {
+    name    fuel_4_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .01933050000000000000);
+      p2      (1.0 .05718450000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_1_cells;
+    }
+  }
+  {
+    name    fuel_4_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .03194850000000000000);
+      p2      (1.0 .05718450000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_2_cells;
+    }
+  }
+  {
+    name    fuel_4_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .04456650000000000000);
+      p2      (1.0 .05718450000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_3_cells;
+    }
+  }
+  {
+    name    fuel_4_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .05718450000000000000);
+      p2      (1.0 .05718450000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_4_cells;
+    }
+  }
+  {
+    name    fuel_4_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .06980250000000000000);
+      p2      (1.0 .05718450000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_5_cells;
+    }
+  }
+  {
+    name    fuel_4_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .08242050000000000000);
+      p2      (1.0 .05718450000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_6_cells;
+    }
+  }
+  {
+    name    fuel_4_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .09503850000000000000);
+      p2      (1.0 .05718450000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_7_cells;
+    }
+  }
+  {
+    name    fuel_4_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .10765650000000000000);
+      p2      (1.0 .05718450000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_8_cells;
+    }
+  }
+  {
+    name    fuel_4_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .12027450000000000000);
+      p2      (1.0 .05718450000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_9_cells;
+    }
+  }
+  {
+    name    fuel_4_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .13289250000000000000);
+      p2      (1.0 .05718450000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_10_cells;
+    }
+  }
+  {
+    name    fuel_4_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .14551050000000000000);
+      p2      (1.0 .05718450000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_11_cells;
+    }
+  }
+  {
+    name    fuel_4_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .15812850000000000000);
+      p2      (1.0 .05718450000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_12_cells;
+    }
+  }
+  {
+    name    fuel_4_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .17074650000000000000);
+      p2      (1.0 .05718450000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_13_cells;
+    }
+  }
+  {
+    name    fuel_4_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .18336450000000000000);
+      p2      (1.0 .05718450000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_14_cells;
+    }
+  }
+  {
+    name    fuel_4_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .19598250000000000000);
+      p2      (1.0 .05718450000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_15_cells;
+    }
+  }
+  {
+    name    fuel_4_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .05718450000000000000 .20860050000000000000);
+      p2      (1.0 .05718450000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_4_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_4_16_cells;
+    }
+  }
+  {
+    name    fuel_5_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .00671250000000000000);
+      p2      (1.0 .06980250000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_0_cells;
+    }
+  }
+  {
+    name    fuel_5_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .01933050000000000000);
+      p2      (1.0 .06980250000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_1_cells;
+    }
+  }
+  {
+    name    fuel_5_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .03194850000000000000);
+      p2      (1.0 .06980250000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_2_cells;
+    }
+  }
+  {
+    name    fuel_5_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .04456650000000000000);
+      p2      (1.0 .06980250000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_3_cells;
+    }
+  }
+  {
+    name    fuel_5_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .05718450000000000000);
+      p2      (1.0 .06980250000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_4_cells;
+    }
+  }
+  {
+    name    fuel_5_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .06980250000000000000);
+      p2      (1.0 .06980250000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_5_cells;
+    }
+  }
+  {
+    name    fuel_5_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .08242050000000000000);
+      p2      (1.0 .06980250000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_6_cells;
+    }
+  }
+  {
+    name    fuel_5_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .09503850000000000000);
+      p2      (1.0 .06980250000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_7_cells;
+    }
+  }
+  {
+    name    fuel_5_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .10765650000000000000);
+      p2      (1.0 .06980250000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_8_cells;
+    }
+  }
+  {
+    name    fuel_5_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .12027450000000000000);
+      p2      (1.0 .06980250000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_9_cells;
+    }
+  }
+  {
+    name    fuel_5_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .13289250000000000000);
+      p2      (1.0 .06980250000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_10_cells;
+    }
+  }
+  {
+    name    fuel_5_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .14551050000000000000);
+      p2      (1.0 .06980250000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_11_cells;
+    }
+  }
+  {
+    name    fuel_5_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .15812850000000000000);
+      p2      (1.0 .06980250000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_12_cells;
+    }
+  }
+  {
+    name    fuel_5_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .17074650000000000000);
+      p2      (1.0 .06980250000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_13_cells;
+    }
+  }
+  {
+    name    fuel_5_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .18336450000000000000);
+      p2      (1.0 .06980250000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_14_cells;
+    }
+  }
+  {
+    name    fuel_5_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .19598250000000000000);
+      p2      (1.0 .06980250000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_15_cells;
+    }
+  }
+  {
+    name    fuel_5_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .06980250000000000000 .20860050000000000000);
+      p2      (1.0 .06980250000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_5_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_5_16_cells;
+    }
+  }
+  {
+    name    fuel_6_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .00671250000000000000);
+      p2      (1.0 .08242050000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_0_cells;
+    }
+  }
+  {
+    name    fuel_6_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .01933050000000000000);
+      p2      (1.0 .08242050000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_1_cells;
+    }
+  }
+  {
+    name    fuel_6_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .03194850000000000000);
+      p2      (1.0 .08242050000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_2_cells;
+    }
+  }
+  {
+    name    fuel_6_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .04456650000000000000);
+      p2      (1.0 .08242050000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_3_cells;
+    }
+  }
+  {
+    name    fuel_6_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .05718450000000000000);
+      p2      (1.0 .08242050000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_4_cells;
+    }
+  }
+  {
+    name    fuel_6_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .06980250000000000000);
+      p2      (1.0 .08242050000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_5_cells;
+    }
+  }
+  {
+    name    fuel_6_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .08242050000000000000);
+      p2      (1.0 .08242050000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_6_cells;
+    }
+  }
+  {
+    name    fuel_6_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .09503850000000000000);
+      p2      (1.0 .08242050000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_7_cells;
+    }
+  }
+  {
+    name    fuel_6_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .10765650000000000000);
+      p2      (1.0 .08242050000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_8_cells;
+    }
+  }
+  {
+    name    fuel_6_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .12027450000000000000);
+      p2      (1.0 .08242050000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_9_cells;
+    }
+  }
+  {
+    name    fuel_6_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .13289250000000000000);
+      p2      (1.0 .08242050000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_10_cells;
+    }
+  }
+  {
+    name    fuel_6_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .14551050000000000000);
+      p2      (1.0 .08242050000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_11_cells;
+    }
+  }
+  {
+    name    fuel_6_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .15812850000000000000);
+      p2      (1.0 .08242050000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_12_cells;
+    }
+  }
+  {
+    name    fuel_6_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .17074650000000000000);
+      p2      (1.0 .08242050000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_13_cells;
+    }
+  }
+  {
+    name    fuel_6_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .18336450000000000000);
+      p2      (1.0 .08242050000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_14_cells;
+    }
+  }
+  {
+    name    fuel_6_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .19598250000000000000);
+      p2      (1.0 .08242050000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_15_cells;
+    }
+  }
+  {
+    name    fuel_6_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .08242050000000000000 .20860050000000000000);
+      p2      (1.0 .08242050000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_6_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_6_16_cells;
+    }
+  }
+  {
+    name    fuel_7_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .00671250000000000000);
+      p2      (1.0 .09503850000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_0_cells;
+    }
+  }
+  {
+    name    fuel_7_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .01933050000000000000);
+      p2      (1.0 .09503850000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_1_cells;
+    }
+  }
+  {
+    name    fuel_7_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .03194850000000000000);
+      p2      (1.0 .09503850000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_2_cells;
+    }
+  }
+  {
+    name    fuel_7_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .04456650000000000000);
+      p2      (1.0 .09503850000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_3_cells;
+    }
+  }
+  {
+    name    fuel_7_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .05718450000000000000);
+      p2      (1.0 .09503850000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_4_cells;
+    }
+  }
+  {
+    name    fuel_7_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .06980250000000000000);
+      p2      (1.0 .09503850000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_5_cells;
+    }
+  }
+  {
+    name    fuel_7_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .08242050000000000000);
+      p2      (1.0 .09503850000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_6_cells;
+    }
+  }
+  {
+    name    fuel_7_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .09503850000000000000);
+      p2      (1.0 .09503850000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_7_cells;
+    }
+  }
+  {
+    name    fuel_7_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .10765650000000000000);
+      p2      (1.0 .09503850000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_8_cells;
+    }
+  }
+  {
+    name    fuel_7_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .12027450000000000000);
+      p2      (1.0 .09503850000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_9_cells;
+    }
+  }
+  {
+    name    fuel_7_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .13289250000000000000);
+      p2      (1.0 .09503850000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_10_cells;
+    }
+  }
+  {
+    name    fuel_7_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .14551050000000000000);
+      p2      (1.0 .09503850000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_11_cells;
+    }
+  }
+  {
+    name    fuel_7_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .15812850000000000000);
+      p2      (1.0 .09503850000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_12_cells;
+    }
+  }
+  {
+    name    fuel_7_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .17074650000000000000);
+      p2      (1.0 .09503850000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_13_cells;
+    }
+  }
+  {
+    name    fuel_7_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .18336450000000000000);
+      p2      (1.0 .09503850000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_14_cells;
+    }
+  }
+  {
+    name    fuel_7_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .19598250000000000000);
+      p2      (1.0 .09503850000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_15_cells;
+    }
+  }
+  {
+    name    fuel_7_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .09503850000000000000 .20860050000000000000);
+      p2      (1.0 .09503850000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_7_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_7_16_cells;
+    }
+  }
+  {
+    name    fuel_8_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .00671250000000000000);
+      p2      (1.0 .10765650000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_0_cells;
+    }
+  }
+  {
+    name    fuel_8_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .01933050000000000000);
+      p2      (1.0 .10765650000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_1_cells;
+    }
+  }
+  {
+    name    fuel_8_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .03194850000000000000);
+      p2      (1.0 .10765650000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_2_cells;
+    }
+  }
+  {
+    name    fuel_8_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .04456650000000000000);
+      p2      (1.0 .10765650000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_3_cells;
+    }
+  }
+  {
+    name    fuel_8_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .05718450000000000000);
+      p2      (1.0 .10765650000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_4_cells;
+    }
+  }
+  {
+    name    fuel_8_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .06980250000000000000);
+      p2      (1.0 .10765650000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_5_cells;
+    }
+  }
+  {
+    name    fuel_8_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .08242050000000000000);
+      p2      (1.0 .10765650000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_6_cells;
+    }
+  }
+  {
+    name    fuel_8_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .09503850000000000000);
+      p2      (1.0 .10765650000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_7_cells;
+    }
+  }
+  {
+    name    fuel_8_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .10765650000000000000);
+      p2      (1.0 .10765650000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_8_cells;
+    }
+  }
+  {
+    name    fuel_8_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .12027450000000000000);
+      p2      (1.0 .10765650000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_9_cells;
+    }
+  }
+  {
+    name    fuel_8_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .13289250000000000000);
+      p2      (1.0 .10765650000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_10_cells;
+    }
+  }
+  {
+    name    fuel_8_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .14551050000000000000);
+      p2      (1.0 .10765650000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_11_cells;
+    }
+  }
+  {
+    name    fuel_8_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .15812850000000000000);
+      p2      (1.0 .10765650000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_12_cells;
+    }
+  }
+  {
+    name    fuel_8_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .17074650000000000000);
+      p2      (1.0 .10765650000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_13_cells;
+    }
+  }
+  {
+    name    fuel_8_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .18336450000000000000);
+      p2      (1.0 .10765650000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_14_cells;
+    }
+  }
+  {
+    name    fuel_8_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .19598250000000000000);
+      p2      (1.0 .10765650000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_15_cells;
+    }
+  }
+  {
+    name    fuel_8_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .10765650000000000000 .20860050000000000000);
+      p2      (1.0 .10765650000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_8_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_8_16_cells;
+    }
+  }
+  {
+    name    fuel_9_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .00671250000000000000);
+      p2      (1.0 .12027450000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_0_cells;
+    }
+  }
+  {
+    name    fuel_9_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .01933050000000000000);
+      p2      (1.0 .12027450000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_1_cells;
+    }
+  }
+  {
+    name    fuel_9_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .03194850000000000000);
+      p2      (1.0 .12027450000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_2_cells;
+    }
+  }
+  {
+    name    fuel_9_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .04456650000000000000);
+      p2      (1.0 .12027450000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_3_cells;
+    }
+  }
+  {
+    name    fuel_9_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .05718450000000000000);
+      p2      (1.0 .12027450000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_4_cells;
+    }
+  }
+  {
+    name    fuel_9_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .06980250000000000000);
+      p2      (1.0 .12027450000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_5_cells;
+    }
+  }
+  {
+    name    fuel_9_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .08242050000000000000);
+      p2      (1.0 .12027450000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_6_cells;
+    }
+  }
+  {
+    name    fuel_9_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .09503850000000000000);
+      p2      (1.0 .12027450000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_7_cells;
+    }
+  }
+  {
+    name    fuel_9_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .10765650000000000000);
+      p2      (1.0 .12027450000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_8_cells;
+    }
+  }
+  {
+    name    fuel_9_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .12027450000000000000);
+      p2      (1.0 .12027450000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_9_cells;
+    }
+  }
+  {
+    name    fuel_9_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .13289250000000000000);
+      p2      (1.0 .12027450000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_10_cells;
+    }
+  }
+  {
+    name    fuel_9_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .14551050000000000000);
+      p2      (1.0 .12027450000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_11_cells;
+    }
+  }
+  {
+    name    fuel_9_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .15812850000000000000);
+      p2      (1.0 .12027450000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_12_cells;
+    }
+  }
+  {
+    name    fuel_9_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .17074650000000000000);
+      p2      (1.0 .12027450000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_13_cells;
+    }
+  }
+  {
+    name    fuel_9_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .18336450000000000000);
+      p2      (1.0 .12027450000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_14_cells;
+    }
+  }
+  {
+    name    fuel_9_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .19598250000000000000);
+      p2      (1.0 .12027450000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_15_cells;
+    }
+  }
+  {
+    name    fuel_9_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .12027450000000000000 .20860050000000000000);
+      p2      (1.0 .12027450000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_9_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_9_16_cells;
+    }
+  }
+  {
+    name    fuel_10_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .00671250000000000000);
+      p2      (1.0 .13289250000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_0_cells;
+    }
+  }
+  {
+    name    fuel_10_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .01933050000000000000);
+      p2      (1.0 .13289250000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_1_cells;
+    }
+  }
+  {
+    name    fuel_10_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .03194850000000000000);
+      p2      (1.0 .13289250000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_2_cells;
+    }
+  }
+  {
+    name    fuel_10_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .04456650000000000000);
+      p2      (1.0 .13289250000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_3_cells;
+    }
+  }
+  {
+    name    fuel_10_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .05718450000000000000);
+      p2      (1.0 .13289250000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_4_cells;
+    }
+  }
+  {
+    name    fuel_10_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .06980250000000000000);
+      p2      (1.0 .13289250000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_5_cells;
+    }
+  }
+  {
+    name    fuel_10_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .08242050000000000000);
+      p2      (1.0 .13289250000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_6_cells;
+    }
+  }
+  {
+    name    fuel_10_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .09503850000000000000);
+      p2      (1.0 .13289250000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_7_cells;
+    }
+  }
+  {
+    name    fuel_10_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .10765650000000000000);
+      p2      (1.0 .13289250000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_8_cells;
+    }
+  }
+  {
+    name    fuel_10_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .12027450000000000000);
+      p2      (1.0 .13289250000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_9_cells;
+    }
+  }
+  {
+    name    fuel_10_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .13289250000000000000);
+      p2      (1.0 .13289250000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_10_cells;
+    }
+  }
+  {
+    name    fuel_10_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .14551050000000000000);
+      p2      (1.0 .13289250000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_11_cells;
+    }
+  }
+  {
+    name    fuel_10_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .15812850000000000000);
+      p2      (1.0 .13289250000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_12_cells;
+    }
+  }
+  {
+    name    fuel_10_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .17074650000000000000);
+      p2      (1.0 .13289250000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_13_cells;
+    }
+  }
+  {
+    name    fuel_10_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .18336450000000000000);
+      p2      (1.0 .13289250000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_14_cells;
+    }
+  }
+  {
+    name    fuel_10_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .19598250000000000000);
+      p2      (1.0 .13289250000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_15_cells;
+    }
+  }
+  {
+    name    fuel_10_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .13289250000000000000 .20860050000000000000);
+      p2      (1.0 .13289250000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_10_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_10_16_cells;
+    }
+  }
+  {
+    name    fuel_11_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .00671250000000000000);
+      p2      (1.0 .14551050000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_0_cells;
+    }
+  }
+  {
+    name    fuel_11_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .01933050000000000000);
+      p2      (1.0 .14551050000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_1_cells;
+    }
+  }
+  {
+    name    fuel_11_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .03194850000000000000);
+      p2      (1.0 .14551050000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_2_cells;
+    }
+  }
+  {
+    name    fuel_11_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .04456650000000000000);
+      p2      (1.0 .14551050000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_3_cells;
+    }
+  }
+  {
+    name    fuel_11_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .05718450000000000000);
+      p2      (1.0 .14551050000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_4_cells;
+    }
+  }
+  {
+    name    fuel_11_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .06980250000000000000);
+      p2      (1.0 .14551050000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_5_cells;
+    }
+  }
+  {
+    name    fuel_11_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .08242050000000000000);
+      p2      (1.0 .14551050000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_6_cells;
+    }
+  }
+  {
+    name    fuel_11_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .09503850000000000000);
+      p2      (1.0 .14551050000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_7_cells;
+    }
+  }
+  {
+    name    fuel_11_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .10765650000000000000);
+      p2      (1.0 .14551050000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_8_cells;
+    }
+  }
+  {
+    name    fuel_11_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .12027450000000000000);
+      p2      (1.0 .14551050000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_9_cells;
+    }
+  }
+  {
+    name    fuel_11_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .13289250000000000000);
+      p2      (1.0 .14551050000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_10_cells;
+    }
+  }
+  {
+    name    fuel_11_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .14551050000000000000);
+      p2      (1.0 .14551050000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_11_cells;
+    }
+  }
+  {
+    name    fuel_11_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .15812850000000000000);
+      p2      (1.0 .14551050000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_12_cells;
+    }
+  }
+  {
+    name    fuel_11_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .17074650000000000000);
+      p2      (1.0 .14551050000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_13_cells;
+    }
+  }
+  {
+    name    fuel_11_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .18336450000000000000);
+      p2      (1.0 .14551050000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_14_cells;
+    }
+  }
+  {
+    name    fuel_11_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .19598250000000000000);
+      p2      (1.0 .14551050000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_15_cells;
+    }
+  }
+  {
+    name    fuel_11_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .14551050000000000000 .20860050000000000000);
+      p2      (1.0 .14551050000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_11_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_11_16_cells;
+    }
+  }
+  {
+    name    fuel_12_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .00671250000000000000);
+      p2      (1.0 .15812850000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_0_cells;
+    }
+  }
+  {
+    name    fuel_12_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .01933050000000000000);
+      p2      (1.0 .15812850000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_1_cells;
+    }
+  }
+  {
+    name    fuel_12_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .03194850000000000000);
+      p2      (1.0 .15812850000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_2_cells;
+    }
+  }
+  {
+    name    fuel_12_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .04456650000000000000);
+      p2      (1.0 .15812850000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_3_cells;
+    }
+  }
+  {
+    name    fuel_12_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .05718450000000000000);
+      p2      (1.0 .15812850000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_4_cells;
+    }
+  }
+  {
+    name    fuel_12_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .06980250000000000000);
+      p2      (1.0 .15812850000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_5_cells;
+    }
+  }
+  {
+    name    fuel_12_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .08242050000000000000);
+      p2      (1.0 .15812850000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_6_cells;
+    }
+  }
+  {
+    name    fuel_12_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .09503850000000000000);
+      p2      (1.0 .15812850000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_7_cells;
+    }
+  }
+  {
+    name    fuel_12_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .10765650000000000000);
+      p2      (1.0 .15812850000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_8_cells;
+    }
+  }
+  {
+    name    fuel_12_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .12027450000000000000);
+      p2      (1.0 .15812850000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_9_cells;
+    }
+  }
+  {
+    name    fuel_12_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .13289250000000000000);
+      p2      (1.0 .15812850000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_10_cells;
+    }
+  }
+  {
+    name    fuel_12_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .14551050000000000000);
+      p2      (1.0 .15812850000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_11_cells;
+    }
+  }
+  {
+    name    fuel_12_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .15812850000000000000);
+      p2      (1.0 .15812850000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_12_cells;
+    }
+  }
+  {
+    name    fuel_12_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .17074650000000000000);
+      p2      (1.0 .15812850000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_13_cells;
+    }
+  }
+  {
+    name    fuel_12_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .18336450000000000000);
+      p2      (1.0 .15812850000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_14_cells;
+    }
+  }
+  {
+    name    fuel_12_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .19598250000000000000);
+      p2      (1.0 .15812850000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_15_cells;
+    }
+  }
+  {
+    name    fuel_12_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .15812850000000000000 .20860050000000000000);
+      p2      (1.0 .15812850000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_12_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_12_16_cells;
+    }
+  }
+  {
+    name    fuel_13_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .00671250000000000000);
+      p2      (1.0 .17074650000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_0_cells;
+    }
+  }
+  {
+    name    fuel_13_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .01933050000000000000);
+      p2      (1.0 .17074650000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_1_cells;
+    }
+  }
+  {
+    name    fuel_13_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .03194850000000000000);
+      p2      (1.0 .17074650000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_2_cells;
+    }
+  }
+  {
+    name    fuel_13_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .04456650000000000000);
+      p2      (1.0 .17074650000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_3_cells;
+    }
+  }
+  {
+    name    fuel_13_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .05718450000000000000);
+      p2      (1.0 .17074650000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_4_cells;
+    }
+  }
+  {
+    name    fuel_13_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .06980250000000000000);
+      p2      (1.0 .17074650000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_5_cells;
+    }
+  }
+  {
+    name    fuel_13_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .08242050000000000000);
+      p2      (1.0 .17074650000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_6_cells;
+    }
+  }
+  {
+    name    fuel_13_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .09503850000000000000);
+      p2      (1.0 .17074650000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_7_cells;
+    }
+  }
+  {
+    name    fuel_13_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .10765650000000000000);
+      p2      (1.0 .17074650000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_8_cells;
+    }
+  }
+  {
+    name    fuel_13_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .12027450000000000000);
+      p2      (1.0 .17074650000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_9_cells;
+    }
+  }
+  {
+    name    fuel_13_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .13289250000000000000);
+      p2      (1.0 .17074650000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_10_cells;
+    }
+  }
+  {
+    name    fuel_13_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .14551050000000000000);
+      p2      (1.0 .17074650000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_11_cells;
+    }
+  }
+  {
+    name    fuel_13_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .15812850000000000000);
+      p2      (1.0 .17074650000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_12_cells;
+    }
+  }
+  {
+    name    fuel_13_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .17074650000000000000);
+      p2      (1.0 .17074650000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_13_cells;
+    }
+  }
+  {
+    name    fuel_13_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .18336450000000000000);
+      p2      (1.0 .17074650000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_14_cells;
+    }
+  }
+  {
+    name    fuel_13_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .19598250000000000000);
+      p2      (1.0 .17074650000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_15_cells;
+    }
+  }
+  {
+    name    fuel_13_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .17074650000000000000 .20860050000000000000);
+      p2      (1.0 .17074650000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_13_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_13_16_cells;
+    }
+  }
+  {
+    name    fuel_14_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .00671250000000000000);
+      p2      (1.0 .18336450000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_0_cells;
+    }
+  }
+  {
+    name    fuel_14_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .01933050000000000000);
+      p2      (1.0 .18336450000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_1_cells;
+    }
+  }
+  {
+    name    fuel_14_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .03194850000000000000);
+      p2      (1.0 .18336450000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_2_cells;
+    }
+  }
+  {
+    name    fuel_14_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .04456650000000000000);
+      p2      (1.0 .18336450000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_3_cells;
+    }
+  }
+  {
+    name    fuel_14_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .05718450000000000000);
+      p2      (1.0 .18336450000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_4_cells;
+    }
+  }
+  {
+    name    fuel_14_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .06980250000000000000);
+      p2      (1.0 .18336450000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_5_cells;
+    }
+  }
+  {
+    name    fuel_14_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .08242050000000000000);
+      p2      (1.0 .18336450000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_6_cells;
+    }
+  }
+  {
+    name    fuel_14_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .09503850000000000000);
+      p2      (1.0 .18336450000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_7_cells;
+    }
+  }
+  {
+    name    fuel_14_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .10765650000000000000);
+      p2      (1.0 .18336450000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_8_cells;
+    }
+  }
+  {
+    name    fuel_14_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .12027450000000000000);
+      p2      (1.0 .18336450000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_9_cells;
+    }
+  }
+  {
+    name    fuel_14_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .13289250000000000000);
+      p2      (1.0 .18336450000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_10_cells;
+    }
+  }
+  {
+    name    fuel_14_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .14551050000000000000);
+      p2      (1.0 .18336450000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_11_cells;
+    }
+  }
+  {
+    name    fuel_14_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .15812850000000000000);
+      p2      (1.0 .18336450000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_12_cells;
+    }
+  }
+  {
+    name    fuel_14_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .17074650000000000000);
+      p2      (1.0 .18336450000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_13_cells;
+    }
+  }
+  {
+    name    fuel_14_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .18336450000000000000);
+      p2      (1.0 .18336450000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_14_cells;
+    }
+  }
+  {
+    name    fuel_14_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .19598250000000000000);
+      p2      (1.0 .18336450000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_15_cells;
+    }
+  }
+  {
+    name    fuel_14_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .18336450000000000000 .20860050000000000000);
+      p2      (1.0 .18336450000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_14_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_14_16_cells;
+    }
+  }
+  {
+    name    fuel_15_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .00671250000000000000);
+      p2      (1.0 .19598250000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_0_cells;
+    }
+  }
+  {
+    name    fuel_15_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .01933050000000000000);
+      p2      (1.0 .19598250000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_1_cells;
+    }
+  }
+  {
+    name    fuel_15_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .03194850000000000000);
+      p2      (1.0 .19598250000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_2_cells;
+    }
+  }
+  {
+    name    fuel_15_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .04456650000000000000);
+      p2      (1.0 .19598250000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_3_cells;
+    }
+  }
+  {
+    name    fuel_15_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .05718450000000000000);
+      p2      (1.0 .19598250000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_4_cells;
+    }
+  }
+  {
+    name    fuel_15_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .06980250000000000000);
+      p2      (1.0 .19598250000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_5_cells;
+    }
+  }
+  {
+    name    fuel_15_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .08242050000000000000);
+      p2      (1.0 .19598250000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_6_cells;
+    }
+  }
+  {
+    name    fuel_15_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .09503850000000000000);
+      p2      (1.0 .19598250000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_7_cells;
+    }
+  }
+  {
+    name    fuel_15_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .10765650000000000000);
+      p2      (1.0 .19598250000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_8_cells;
+    }
+  }
+  {
+    name    fuel_15_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .12027450000000000000);
+      p2      (1.0 .19598250000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_9_cells;
+    }
+  }
+  {
+    name    fuel_15_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .13289250000000000000);
+      p2      (1.0 .19598250000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_10_cells;
+    }
+  }
+  {
+    name    fuel_15_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .14551050000000000000);
+      p2      (1.0 .19598250000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_11_cells;
+    }
+  }
+  {
+    name    fuel_15_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .15812850000000000000);
+      p2      (1.0 .19598250000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_12_cells;
+    }
+  }
+  {
+    name    fuel_15_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .17074650000000000000);
+      p2      (1.0 .19598250000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_13_cells;
+    }
+  }
+  {
+    name    fuel_15_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .18336450000000000000);
+      p2      (1.0 .19598250000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_14_cells;
+    }
+  }
+  {
+    name    fuel_15_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .19598250000000000000);
+      p2      (1.0 .19598250000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_15_cells;
+    }
+  }
+  {
+    name    fuel_15_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .19598250000000000000 .20860050000000000000);
+      p2      (1.0 .19598250000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_15_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_15_16_cells;
+    }
+  }
+  {
+    name    fuel_16_0_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .00671250000000000000);
+      p2      (1.0 .20860050000000000000 .00671250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_0;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_0_cells;
+    }
+  }
+  {
+    name    fuel_16_1_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .01933050000000000000);
+      p2      (1.0 .20860050000000000000 .01933050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_1;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_1_cells;
+    }
+  }
+  {
+    name    fuel_16_2_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .03194850000000000000);
+      p2      (1.0 .20860050000000000000 .03194850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_2;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_2_cells;
+    }
+  }
+  {
+    name    fuel_16_3_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .04456650000000000000);
+      p2      (1.0 .20860050000000000000 .04456650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_3;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_3_cells;
+    }
+  }
+  {
+    name    fuel_16_4_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .05718450000000000000);
+      p2      (1.0 .20860050000000000000 .05718450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_4;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_4_cells;
+    }
+  }
+  {
+    name    fuel_16_5_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .06980250000000000000);
+      p2      (1.0 .20860050000000000000 .06980250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_5;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_5_cells;
+    }
+  }
+  {
+    name    fuel_16_6_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .08242050000000000000);
+      p2      (1.0 .20860050000000000000 .08242050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_6;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_6_cells;
+    }
+  }
+  {
+    name    fuel_16_7_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .09503850000000000000);
+      p2      (1.0 .20860050000000000000 .09503850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_7;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_7_cells;
+    }
+  }
+  {
+    name    fuel_16_8_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .10765650000000000000);
+      p2      (1.0 .20860050000000000000 .10765650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_8;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_8_cells;
+    }
+  }
+  {
+    name    fuel_16_9_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .12027450000000000000);
+      p2      (1.0 .20860050000000000000 .12027450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_9;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_9_cells;
+    }
+  }
+  {
+    name    fuel_16_10_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .13289250000000000000);
+      p2      (1.0 .20860050000000000000 .13289250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_10;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_10_cells;
+    }
+  }
+  {
+    name    fuel_16_11_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .14551050000000000000);
+      p2      (1.0 .20860050000000000000 .14551050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_11;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_11_cells;
+    }
+  }
+  {
+    name    fuel_16_12_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .15812850000000000000);
+      p2      (1.0 .20860050000000000000 .15812850000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_12;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_12_cells;
+    }
+  }
+  {
+    name    fuel_16_13_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .17074650000000000000);
+      p2      (1.0 .20860050000000000000 .17074650000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_13;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_13_cells;
+    }
+  }
+  {
+    name    fuel_16_14_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .18336450000000000000);
+      p2      (1.0 .20860050000000000000 .18336450000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_14;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_14_cells;
+    }
+  }
+  {
+    name    fuel_16_15_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .19598250000000000000);
+      p2      (1.0 .20860050000000000000 .19598250000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_15;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_15_cells;
+    }
+  }
+  {
+    name    fuel_16_16_cells;
+    type    cellSet;
+    action  new;
+    source  cylinderToCell;
+    sourceInfo
+    {
+      p1      (0 .20860050000000000000 .20860050000000000000);
+      p2      (1.0 .20860050000000000000 .20860050000000000000);
+      radius  .004757;
+    }
+  }
+  {
+    name    fuel_16_16;
+    type    cellZoneSet;
+    action  new;
+    source  setToCellZone;
+    sourceInfo
+    {
+      set fuel_16_16_cells;
+    }
+  }
+);

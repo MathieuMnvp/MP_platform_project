@@ -1,0 +1,10 @@
+{
+  echo 'defaultFieldValues ( volScalarFieldValue rodMask 0 );'
+  echo 'regions ('
+  for i in $(seq 0 16); do
+    for j in $(seq 0 16); do
+      echo "  cellZone fuel_${i}_${j} { volScalarFieldValue rodMask 1; }"
+    done
+  done
+  echo ');'
+} > system/setFieldsDict

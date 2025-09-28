@@ -14,8 +14,28 @@ class NeOutputReader:
         self.results_dir = os.path.join(os.getcwd(), "results")
 
         #Variables
-        self.NN = 24 #Number of nodes
-        self.P_target = 6.14035e6  
+        self._NN = 1 #Number of nodes
+        self._P_target = 1 #Power of an assembly in W
+
+    @property
+    def NN(self):
+        return self._NN
+
+    @NN.setter
+    def NN(self, value):
+        if value <= 0:
+            raise ValueError("NN must be > 0")
+        self._NN = value
+
+    @property
+    def P_target(self):
+        return self._P_target
+    
+    @P_target.setter
+    def P_target(self, value):
+        if value <= 0:
+            raise ValueError("P_target must be > 0")
+        self._P_target = value        
 
     def run(self):
         start=time.time()
@@ -28,11 +48,11 @@ class NeOutputReader:
 
     def output_read(self):
 
-        NN = self.NN
-        P_target = self.P_target
+        NN = int(self._NN)
+        P_target = self._P_target
         results_dir = self.results_dir
 
-        with openmc.StatePoint(os.path.join(results_dir, "statepoint.100.h5")) as sp:
+        with openmc.StatePoint(os.path.join(results_dir, "statepoint.120.h5")) as sp: #corriger cela
             tally = sp.get_tally(name="heating_per_cell")
             tally_power = tally.mean.ravel()
             tally_id =  tally.filters[0].bins 
@@ -53,7 +73,6 @@ class NeOutputReader:
                 if str(key)[1:3] == str(z_value):
                     xy_list.append(heat_power[key])
             self.z_list.append(np.mean(xy_list))
-        print(self.z_list)
          
         self.z_values = np.arange(1, NN+1)     
 
@@ -66,6 +85,3 @@ class NeOutputReader:
         plt.title("Power in a node")
         plt.grid(True)
         plt.savefig(os.path.join(self.results_dir, "mesh_power.png"), dpi=300, bbox_inches="tight")
-
-        #P_tot = h.sum()
-        #P_cells = P_target * tally_power / P_tot
