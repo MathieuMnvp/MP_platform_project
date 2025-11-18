@@ -1,0 +1,368 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+powerRamp
+{
+    type            scalarCodedSource;
+    selectionMode   all;
+    fields          (h);
+    name            sourceTime;
+
+    codeOptions
+    #{
+        -I$(LIB_SRC)/finiteVolume/lnInclude \
+        -I$(LIB_SRC)/meshTools/lnInclude
+    #};
+
+    codeInclude
+    #{
+        #include "fvCFD.H"
+        #include "IFstream.H"
+        #include "OFstream.H"
+        #include "IStringStream.H"
+        #include "DynamicList.H"
+        #include <cmath>
+        
+        namespace Foam
+        {
+        namespace fv
+        {
+            static bool initialised = false;
+            static scalarField qWall;
+            static scalarField faceAreas;
+            static scalar PtotalCSV = 0.0;
+            static label rodsPatchID = -1;
+        }
+        }
+    #};
+
+
+    codeCorrect
+    #{
+    #};
+
+
+    codeAddSupRho
+    #{
+        const char* casePath = std::getenv("FOAM_CASE");
+        std::string csvPath = std::string(casePath) + "/../NE_output.csv";
+        IFstream csvFile(csvPath.c_str());
+        if (!csvFile.good())
+        {
+            Info<< "Pas de fichier NE_output.csv" << endl;
+            return; 
+        }
+        else
+        {
+            if (!Foam::fv::initialised)
+            {
+
+                Info<< "\n========================================" << endl;
+                Info<< "INITIALISATION heatSourceCode (WALL FLUX)" << endl;
+                Info<< "========================================\n" << endl;
+
+                Foam::fv::initialised = true;
+                const scalar xmin = 0.0004035, xmax = 0.2149095;
+                const scalar ymin = 0.0004035, ymax = 0.2149095;
+                const scalar zmin = 0.0,       zmax = 2.005613;
+                const label nx = 17, ny = 17, nz = 24;
+
+                const scalar dx = (xmax - xmin) / nx;
+                const scalar dy = (ymax - ymin) / ny;
+                const scalar dz = (zmax - zmin) / nz;
+
+                const scalar rodRadius = 0.00475;
+                const scalar searchRadiusXY = rodRadius * 1.1;
+                const scalar searchRadiusZ = dz / 2.0;
+
+                Info<< "Géométrie grille neutronique :" << endl;
+                Info<< "  Domaine X    = [" << xmin << ", " << xmax << "] m" << endl;
+                Info<< "  Domaine Y    = [" << ymin << ", " << ymax << "] m" << endl;
+                Info<< "  Domaine Z    = [" << zmin << ", " << zmax << "] m" << endl;
+                Info<< "  Grille       = " << nx << "×" << ny << "×" << nz << endl;
+                Info<< "  Pas dx       = " << dx << " m" << endl;
+                Info<< "  Pas dy       = " << dy << " m" << endl;
+                Info<< "  Pas dz       = " << dz << " m" << endl;
+                Info<< "  Rayon rod    = " << rodRadius << " m" << endl;
+                Info<< "  Rayon search = " << searchRadiusXY << " m" << endl;
+                Info<< "  Hauteur Z    = ±" << searchRadiusZ << " m" << endl;
+                Info<< endl;
+
+                const fvMesh& mesh = this->mesh();
+                Foam::fv::rodsPatchID = mesh.boundaryMesh().findPatchID("rods");
+                
+                if (Foam::fv::rodsPatchID == -1)
+                {
+                    FatalErrorInFunction
+                        << "Patch 'rods' introuvable !"
+                        << exit(FatalError);
+                }
+                
+                const polyPatch& rodsPatch = mesh.boundaryMesh()[Foam::fv::rodsPatchID];
+                const vectorField faceCentres(rodsPatch.faceCentres());
+                
+                Info<< "Patch 'rods' trouvé : " << rodsPatch.size() << " faces" << endl;
+                
+                Foam::fv::faceAreas.setSize(rodsPatch.size());
+                scalar totalSurface = 0.0;
+                forAll(rodsPatch, faceI)
+                {
+                    Foam::fv::faceAreas[faceI] = rodsPatch[faceI].mag(mesh.points());
+                    totalSurface += Foam::fv::faceAreas[faceI];
+                }
+                
+                Info<< "Surface totale patch = " << totalSurface << " m²" << endl << endl;
+
+                struct RodPower
+                {
+                    label ix, iy, iz;
+                    scalar power;
+                };
+
+                DynamicList<RodPower> rodData;
+
+                string header;
+                csvFile.getLine(header);
+
+                Foam::fv::PtotalCSV = 0.0;
+                
+                while (csvFile.good())
+                {
+                    string line;
+                    csvFile.getLine(line);
+                    
+                    if (line.empty()) continue;
+
+                    DynamicList<string> tokens;
+                    size_t start = 0;
+                    size_t end = 0;
+                    
+                    while ((end = line.find(',', start)) != string::npos)
+                    {
+                        tokens.append(line.substr(start, end - start));
+                        start = end + 1;
+                    }
+                    tokens.append(line.substr(start)); 
+
+                    if (tokens.size() == 4)
+                    {
+                        RodPower rod;
+                        rod.ix = std::stoi(tokens[0]);
+                        rod.iy = std::stoi(tokens[1]);
+                        rod.iz = std::stoi(tokens[2]);
+                        rod.power = std::stod(tokens[3]);
+                        
+                        rodData.append(rod);
+                        Foam::fv::PtotalCSV += rod.power;
+                    }
+                }
+
+                Info<< "Fichier CSV lu : " << rodData.size() << " points" << endl;
+                Info<< "Puissance totale CSV = " << Foam::fv::PtotalCSV << " W" << endl;
+                Info<< endl;
+
+                vectorField csvCentres(rodData.size());
+                scalarField csvPowers(rodData.size());
+
+                Info<< "=== EXEMPLES DE MAPPING ===" << endl;
+                forAll(rodData, csvI)
+                {
+                    const RodPower& rod = rodData[csvI];
+                    
+                    csvCentres[csvI] = vector
+                    (
+                        xmin + (rod.ix - 0.5) * dx,
+                        ymin + (rod.iy - 0.5) * dy,
+                        zmin + (rod.iz - 0.5) * dz
+                    );
+                    
+                    csvPowers[csvI] = rod.power;
+
+                    if (csvI < 3)
+                    {
+                        Info<< "CSV[" << csvI << "] : "
+                            << "(" << rod.ix << "," << rod.iy << "," << rod.iz << ") "
+                            << "P=" << rod.power << " W → " << csvCentres[csvI] << endl;
+                    }
+                }
+                Info<< "..." << endl << endl;
+
+                Info<< "Démarrage interpolation (cylindre par point CSV)..." << endl;
+                
+                Foam::fv::qWall.setSize(rodsPatch.size(), 0.0);
+                
+                label nCSVwithFaces = 0;
+                label nCSVwithoutFaces = 0;
+                scalar totalPowerMapped = 0.0;
+
+                forAll(csvCentres, csvI)
+                {
+                    const vector& csvPos = csvCentres[csvI];
+                    const scalar Pcsv = csvPowers[csvI];
+
+                    if (csvI % 1000 == 0)
+                    {
+                        Info<< "  Point CSV " << csvI << "/" << csvCentres.size() << endl;
+                    }
+
+                    DynamicList<label> facesInCylinder;
+                    DynamicList<scalar> faceAreasInCylinder;
+                    scalar totalAreaInCylinder = 0.0;
+
+                    forAll(faceCentres, faceI)
+                    {
+                        const vector& facePos = faceCentres[faceI];
+                        
+                        scalar distXY = Foam::sqrt
+                        (
+                            Foam::sqr(facePos.x() - csvPos.x()) +
+                            Foam::sqr(facePos.y() - csvPos.y())
+                        );
+                        
+                        scalar distZ = Foam::mag(facePos.z() - csvPos.z());
+
+                        if (distXY <= searchRadiusXY && distZ <= searchRadiusZ)
+                        {
+                            facesInCylinder.append(faceI);
+                            scalar Si = Foam::fv::faceAreas[faceI];
+                            faceAreasInCylinder.append(Si);
+                            totalAreaInCylinder += Si;
+                        }
+                    }
+
+                    if (facesInCylinder.size() > 0)
+                    {
+                        nCSVwithFaces++;
+                        
+                        forAll(facesInCylinder, i)
+                        {
+                            label faceI = facesInCylinder[i];
+                            scalar Si = faceAreasInCylinder[i];
+                            scalar weight = Si / totalAreaInCylinder;
+                            scalar powerForThisFace = weight * Pcsv;
+                            
+                            Foam::fv::qWall[faceI] += powerForThisFace;
+                            totalPowerMapped += powerForThisFace;
+                        }
+                    }
+                    else
+                    {
+                        nCSVwithoutFaces++;
+                        
+                        if (nCSVwithoutFaces <= 5)
+                        {
+                            WarningInFunction
+                                << "Point CSV #" << csvI << " à " << csvPos 
+                                << " sans face CFD !" << endl;
+                        }
+                    }
+                }
+
+                Info<< "Interpolation terminée" << endl << endl;
+
+                label nFacesWithPower = 0;
+                scalar minPower = GREAT;
+                scalar maxPower = -GREAT;
+
+                forAll(Foam::fv::qWall, faceI)
+                {
+                    if (Foam::fv::qWall[faceI] > SMALL)
+                    {
+                        nFacesWithPower++;
+                        minPower = min(minPower, Foam::fv::qWall[faceI]);
+                        maxPower = max(maxPower, Foam::fv::qWall[faceI]);
+                    }
+                }
+
+                Info<< "╔════════════════════════════════════════╗" << endl;
+                Info<< "║    STATISTIQUES D'INTERPOLATION        ║" << endl;
+                Info<< "╠════════════════════════════════════════╣" << endl;
+                Info<< "║ Points CSV traités  : " << csvCentres.size() << endl;
+                Info<< "║ Points avec faces   : " << nCSVwithFaces << endl;
+                Info<< "║ Points SANS faces   : " << nCSVwithoutFaces << endl;
+                Info<< "║                                        ║" << endl;
+                Info<< "║ Faces CFD totales   : " << rodsPatch.size() << endl;
+                Info<< "║ Faces avec P>0      : " << nFacesWithPower << endl;
+                Info<< "║ Faces avec P=0      : " << (rodsPatch.size() - nFacesWithPower) << endl;
+                Info<< "║                                        ║" << endl;
+                
+                if (nFacesWithPower > 0)
+                {
+                    Info<< "║ Puissance min/face  : " << minPower << " W" << endl;
+                    Info<< "║ Puissance max/face  : " << maxPower << " W" << endl;
+                    Info<< "║ Puissance moy/face  : " << totalPowerMapped/nFacesWithPower << " W" << endl;
+                }
+                
+                Info<< "╠════════════════════════════════════════╣" << endl;
+                Info<< "║      CONSERVATION DE LA PUISSANCE      ║" << endl;
+                Info<< "╠════════════════════════════════════════╣" << endl;
+                Info<< "║ CSV original        : " << Foam::fv::PtotalCSV << " W" << endl;
+                Info<< "║ Après interpolation : " << totalPowerMapped << " W" << endl;
+                Info<< "║ Erreur absolue      : " << (totalPowerMapped - Foam::fv::PtotalCSV) << " W" << endl;
+                Info<< "║ Erreur relative     : " 
+                    << mag(totalPowerMapped - Foam::fv::PtotalCSV)/max(Foam::fv::PtotalCSV, SMALL) * 100.0 
+                    << " %" << endl;
+                Info<< "╚════════════════════════════════════════╝" << endl;
+                Info<< endl;
+
+                if (nCSVwithoutFaces > 0)
+                {
+                    WarningInFunction
+                        << nCSVwithoutFaces << " points CSV sans faces CFD !" << nl
+                        << "  → Augmenter rodRadius ou vérifier alignement" << endl;
+                }
+
+                if (mag(totalPowerMapped - Foam::fv::PtotalCSV)/Foam::fv::PtotalCSV > 0.01)
+                {
+                    WarningInFunction
+                        << "Erreur de conservation > 1% !" << endl;
+                }
+            }
+
+
+            const fvMesh& mesh = this->mesh();
+            
+            if (!Foam::fv::initialised || Foam::fv::rodsPatchID == -1)
+            {
+                return;
+            }
+
+            const label patchID = Foam::fv::rodsPatchID;
+            const fvPatch& rodsPatch = mesh.boundary()[patchID];
+            const labelList& faceCells = rodsPatch.faceCells();
+            
+            forAll(rodsPatch, faceI)
+            {
+                const label cellI = faceCells[faceI];
+                const scalar Qface = Foam::fv::qWall[faceI];
+
+                if (Qface > SMALL)
+                {
+                    const scalar power = Qface;
+
+                    eqn.source()[cellI] -= power;
+                }
+            }
+        }
+    #};
+
+
+
+    codeConstrain
+    #{
+    #};
+}
+

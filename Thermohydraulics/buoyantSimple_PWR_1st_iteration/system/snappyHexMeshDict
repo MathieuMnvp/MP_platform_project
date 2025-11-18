@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile 
+{ 
+    version     2.0; 
+    format      ascii; 
+    class       dictionary; 
+    object      snappyHexMeshDict; 
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+    #include "searchableCylinderDict"
+}
+
+castellatedMeshControls {
+
+    refinementSurfaces
+    {
+        "rod.*"
+        {
+            level (1 2);
+            patchInfo
+            {
+                type wall;
+                faceZone rodFaces;
+            }
+        }
+    }
+    
+    refinementRegions
+    {
+        #include "refinementRegionsDict"
+    }
+
+    maxLocalCells  10000000;
+    maxGlobalCells 10000000;
+    minRefinementCells 10;
+    nCellsBetweenLevels 2;
+    resolveFeatureAngle 60;
+    maxLoadUnbalance 0.05;
+    correctLevels true;
+
+    features
+    (
+    );
+
+    locationInMesh (0.1013475 0.1013475 1);
+
+    allowFreeStandingZoneFaces false;
+
+}
+
+meshQualityControls
+{
+    maxNonOrtho         70;
+    maxBoundarySkewness 4;
+    maxInternalSkewness 4;
+    maxConcave          80;
+    minVol              1e-15;
+    minTetQuality       1e-12;
+    minArea             1e-13;
+    minTwist            0.02;
+    minDeterminant      0.001;
+    minFaceWeight       0.01;
+    minVolRatio         0.01;
+    minTriangleTwist    0.02;
+    errorReduction      0.75;
+    nSmoothScale        4;
+    relaxed             true;
+
+    relaxed
+    {
+        maxNonOrtho     75;
+    }
+}
+
+snapControls
+{
+    nSmoothPatch 5;
+    tolerance 2.0;
+    nSolveIter 30;
+    nRelaxIter 5;
+}
+
+addLayersControls
+{
+    relativeSizes       true;
+    layers
+    {
+        "rods.*"        
+        {
+            nSurfaceLayers 6;        
+        }
+    }
+
+    
+    expansionRatio      1.2;          
+    finalLayerThickness 0.3;          
+
+    minThickness        0.1;
+    nGrow               0;
+    featureAngle        60;
+    slipFeatureAngle    30;
+    nRelaxIter          5;
+    nSmoothSurfaceNormals 3;
+    nSmoothNormals        3;
+    nSmoothThickness      10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle    90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter          50;
+
+    maxNonOrtho        70;
+    maxSkewness        4;
+    maxConcave         80;
+    minVol             1e-13;
+    minTetQuality      1e-30;
+    minArea            1e-13;
+    minTwist           0.02;
+    minDeterminant     0.001;
+    minFaceWeight      0.05;
+    minVolRatio        0.01;
+    minTriangleTwist   0.02;
+}
+
+mergeTolerance 1e-6;

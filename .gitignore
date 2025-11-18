@@ -1,0 +1,16 @@
+Results/
+output/
+*.vtk
+*.vtu
+*.h5
+*.hdf5
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+.venv/
+.vscode/
+.idea/
+*.log
+polyMesh/

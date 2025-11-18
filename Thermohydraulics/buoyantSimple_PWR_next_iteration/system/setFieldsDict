@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+
+defaultFieldValues
+(
+    volScalarFieldValue T 558.15
+);
+
+regions
+(
+    boxToCell
+    {
+        box (-1e9 -1e9 0) (1e9 1e9 0.2);
+        fieldValues ( volScalarFieldValue T 558.15 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 0.2) (1e9 1e9 0.4);
+        fieldValues ( volScalarFieldValue T 561.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 0.4) (1e9 1e9 0.6);
+        fieldValues ( volScalarFieldValue T 564.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 0.6) (1e9 1e9 0.8);
+        fieldValues ( volScalarFieldValue T 567.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 0.8) (1e9 1e9 1.0);
+        fieldValues ( volScalarFieldValue T 570.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 1.0) (1e9 1e9 1.20);
+        fieldValues ( volScalarFieldValue T 573.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 1.20) (1e9 1e9 1.40);
+        fieldValues ( volScalarFieldValue T 576.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 1.40) (1e9 1e9 1.60);
+        fieldValues ( volScalarFieldValue T 579.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 1.60) (1e9 1e9 1.80);
+        fieldValues ( volScalarFieldValue T 582.0 );
+    }
+
+    boxToCell
+    {
+        box (-1e9 -1e9 1.80) (1e9 1e9 2.005613);
+        fieldValues ( volScalarFieldValue T 585.0 );
+    }
+);

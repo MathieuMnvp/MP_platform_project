@@ -1,0 +1,1445 @@
+    rod_1_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_1_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_2_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_3_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_4_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_5_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_6_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_7_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_8_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_9_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_10_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_11_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_12_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_13_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_14_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_15_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_16_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_1
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_2
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_3
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_4
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_5
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_6
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_7
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_8
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_9
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_10
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_11
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_12
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_13
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_14
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_15
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_16
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
+    rod_17_17
+    {
+        mode inside;
+       levels ((1E15 0));
+    }
