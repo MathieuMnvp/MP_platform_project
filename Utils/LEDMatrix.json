@@ -1,0 +1,23 @@
+{
+  "casename": "Asmb_REP_test_validation",
+  "scenario": "Statique",
+  "iteration": 1,
+  "time_step": null,
+  "physics": "neutronics",
+  "neutronics": "openmc",
+  "thermohydraulics": "openfoam",
+  "openmc": {
+    "actual_batch": null
+  },
+  "openfoam": {
+    "iteration": null,
+    "timestep": null
+  },
+  "resources": {
+    "timestamp": "2026-09-02T21:48:52.797447",
+    "system": {
+      "cpu_percent": 100.0,
+      "ram_used": 2.2
+    }
+  }
+}

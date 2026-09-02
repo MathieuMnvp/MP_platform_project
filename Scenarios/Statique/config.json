@@ -1,0 +1,19 @@
+{
+  "scenario": "Statique",
+  "processors": 16,
+  "coupling" : "GaussSeidel",
+  "coupling_dependant" : {
+    "starting_iteration" : 1,
+    "total_iteration" : 15
+  },
+  "neutronics": "openmc",
+  "thermohydraulics": "openfoam",
+  "openmc": {
+    "particules": null,
+    "batches": 150,
+    "inactive": 30
+  },
+  "openfoam": {
+  },
+  "power" : 6.14035e6
+}

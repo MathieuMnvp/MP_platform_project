@@ -92,11 +92,11 @@ SIMPLE
 relaxationFactors
 {
     rho             1.0;
-    p_rgh           0.7;
+    p_rgh           0.6;
     p               0.7;
     U               0.7;
-    h               0.9;
-    "(k|epsilon|omega)" 0.7;
+    h               0.8;
+    "(k|epsilon|omega)" 0.8;
 }
 
 

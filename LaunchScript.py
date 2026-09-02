@@ -1,28 +1,25 @@
 from Coupling.MainCoupling import MainCoupling
+from Utils.JSON_server import JSON_server
+from Utils.Tee import Tee
 
 MCG = MainCoupling()
+JS = JSON_server()
 
-NN = 24
-batches = 200
-inactive = 20
-particles = 10000
-P_target = 6.14035e6
-casename = "Test1"
-start_iteration = 1
-last_iteration = 20
-restart_from_NE = False
+###########################
 
-MCG.NN = NN
-MCG.batches = batches
-MCG.inactive = inactive
-MCG.particles = particles
-MCG.P_target = P_target
+casename = "Asmb_REP_test_validation"
+scenario = "Statique"
+
+###########################
+
+JS.json_server("casename", casename)
+JS.json_server("scenario", scenario)
+
 MCG.casename = casename
-MCG.last_iteration = last_iteration
-MCG.start_iteration = start_iteration
-MCG.restart_from_NE = restart_from_NE
+MCG.scenario = scenario
 
-MCG.main()
+with Tee("log.txt"):
+    print("Simulation start")
+    MCG.main(restart=False)
 
-
-
+#Pour repartir de la dernière itération de la simulation "casename", utiliser restart=True
