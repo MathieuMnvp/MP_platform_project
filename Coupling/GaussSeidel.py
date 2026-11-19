@@ -7,6 +7,7 @@ import logging
 
 import numpy as np
 import pandas as pd
+from scipy import stats
 
 from Neutronics.NeInputGenerator import NeInputGenerator
 from Neutronics.NeOutputReader import NeOutputReader
@@ -21,8 +22,6 @@ logger = logging.getLogger(__name__)
 
 CONFIG_FILENAME = "config.json"
 CONVERGENCE_FILENAME = "convergence.csv"
-CONVERGENCE_THRESHOLD = 1.0 #pas très élégant que tous les critères n'utilisent pas cette valeur (norme L2 notamment)
-MARGIN_FACTOR = 1.05
 
 @dataclass
 class GaussSeidel:
@@ -83,14 +82,13 @@ class GaussSeidel:
             first_iteration, self.last_iteration, self.casename, self.scenario,
         )
 
+
         for iteration in range(first_iteration, self.last_iteration + 1):
             self._run_iteration(iteration)
 
-            if iteration > first_iteration and self._has_converged(iteration):
+            if self._has_converged(iteration) and iteration > first_iteration:
                 logger.info("Convergence atteinte à l'itération %d", iteration)
                 return
-
-        
 
         logger.warning(
             "Pas de convergence après %d itérations", self.last_iteration
@@ -168,26 +166,32 @@ class GaussSeidel:
     # ------------------------------------------------------------------
 
     def _has_converged(self, iteration: int) -> bool:
-        keff_converged = self._check_keff_convergence(iteration)
-        spatial_converged = self._check_spatial_convergence(iteration)
-    
-        return keff_converged and spatial_converged       
-
-    def _check_keff_convergence(self, iteration:int) -> bool:
         if not self.convergence_path.is_file():
-            logger.debug("Pas encore de fichier de résidus")
+            logger.debug("Pas encore de fichier de convergence")
             return False
 
         data = pd.read_csv(self.convergence_path)
         if len(data) < 2:
             return False
+        keff_converged = self._check_keff_convergence(iteration)
+        spatial_power_converged = self._check_power_spatial_convergence(iteration)
+        spatial_temp_converged = self._check_temp_spatial_convergence(iteration)
+    
+        return keff_converged and spatial_power_converged and spatial_temp_converged      
+
+    def _check_keff_convergence(self, iteration:int) -> bool:
+        data = pd.read_csv(self.convergence_path)
+
+        config = self._load_config()
+        CONVERGENCE_THRESHOLD = config["convergence"]["CONVERGENCE_THRESHOLD"]
+        MARGIN_FACTOR = config["convergence"]["MARGIN_FACTOR"]
 
         keff_old, keff_new = data["keff"].tail(2).to_numpy()
         sigma_old, sigma_new = data["sigma_keff"].tail(2).to_numpy()
-
         sigma_combined = math.hypot(sigma_new, sigma_old)
         if sigma_combined == 0.0:
             logger.warning("sigma_keff nul : convergence non évaluable")
+            self._record_residual(data, residual=0)
             return False
 
         residual = abs(keff_new - keff_old) / sigma_combined
@@ -197,34 +201,53 @@ class GaussSeidel:
         self._record_residual(data, residual)
         return residual <= CONVERGENCE_THRESHOLD * MARGIN_FACTOR
 
-    def _check_spatial_convergence(self, iteration:int) -> bool:
-        if not self.convergence_path.is_file():
-            logger.debug("Pas encore de fichier de convergence")
-            return False
-
-        data = pd.read_csv(self.convergence_path)
-        if len(data) < 2:
-            return False
-
+    def _check_power_spatial_convergence(self, iteration:int) -> bool:
         new_power = pd.read_csv(self.results_dir / str(iteration) / "NE_output.csv")
         old_power = pd.read_csv(self.results_dir / str(iteration-1) / "NE_output.csv")
-
         power_new = new_power["Power"].to_numpy()
         power_std_dev_new = new_power["Power_Std_Dev"].to_numpy()
-
         power_old = old_power["Power"].to_numpy()
         power_std_dev_old = old_power["Power_Std_Dev"].to_numpy()
+        
+        delta_power = power_new - power_old
+        sigma_power = np.sqrt(power_std_dev_new**2 + power_std_dev_old**2)
+        z_power = (delta_power / sigma_power).flatten()
 
-        L2_norm_power = np.linalg.norm(power_new-power_old)
-        minimal_L2_norm_possible = np.sqrt(np.sum(power_std_dev_new**2 + power_std_dev_old**2))
+        statistique_D, p_value = stats.kstest(z_power, 'norm')
 
-        self._record_L2_norm(data, L2_norm_power/minimal_L2_norm_possible)
-        return L2_norm_power <= minimal_L2_norm_possible * MARGIN_FACTOR
+        logger.info("Itération %d — résidu Puissance = %.6e",
+            iteration, p_value)
+        self._record_power_L2_norm(statistique_D, p_value)
+        return bool(p_value > 0.05)
 
-    def _record_L2_norm(self, data: pd.DataFrame, L2_norm_power: float, L2_norm_power_std_dev: float) -> None:
-        if "Power_L2" not in data.columns:
-            data["Power_L2"] = pd.NA
-        data.loc[data.index[-1], "Power_L2"] = L2_norm_power
+    def _check_temp_spatial_convergence(self, iteration:int) -> bool:
+        new_temp_df = pd.read_csv(self.results_dir / str(iteration) / "TH_output.csv")
+        old_temp_df = pd.read_csv(self.results_dir / str(iteration-1) / "TH_output.csv")
+        temp_new = new_temp_df["T"].to_numpy() 
+        temp_old = old_temp_df["T"].to_numpy()
+
+        temp_relative_L2 = np.linalg.norm(temp_new - temp_old)/np.linalg.norm(temp_old)
+
+        logger.info("Itération %d — résidu Température = %.3f",
+            iteration, temp_relative_L2)
+        self._record_temp_L2_norm(float(temp_relative_L2))
+        return temp_relative_L2 <= 0.01
+
+    def _record_temp_L2_norm(self, temp_relative_L2: float) -> None:
+        data = pd.read_csv(self.convergence_path)
+        if "temp_relative_L2" not in data.columns:
+            data["temp_relative_L2"] = pd.NA
+        data.loc[data.index[-1], "temp_relative_L2"] = temp_relative_L2
+        data.to_csv(self.convergence_path, index=False, float_format="%.6f")
+
+    def _record_power_L2_norm(self, statistique_D: float, p_value: float) -> None:
+        data = pd.read_csv(self.convergence_path)
+        if "statistique_D" not in data.columns:
+            data["statistique_D"] = pd.NA
+        data.loc[data.index[-1], "statistique_D"] = statistique_D
+        if "p_value" not in data.columns:
+            data["p_value"] = pd.NA
+        data.loc[data.index[-1], "p_value"] = p_value
         data.to_csv(self.convergence_path, index=False, float_format="%.6f")
 
     def _record_residual(self, data: pd.DataFrame, residual: float) -> None:
@@ -239,14 +262,12 @@ class GaussSeidel:
 
     def _resume(self) -> int:
         latest = self._latest_completed_iteration()
-
         if latest is None:
             raise FileNotFoundError(
                 f"Impossible de redémarrer : aucun résultat dans "
                 f"'{self.results_dir}'"
             )
         logger.info("Reprise détectée à l'itération %d", latest)
-
         self.JSserv.start()
         try:
             iteration_dir = self.results_dir / str(latest)
@@ -261,6 +282,9 @@ class GaussSeidel:
         finally:
             self.JSserv.stop()
 
+        if self._has_converged(latest):
+            logger.info("Convergence atteinte à l'itération %d", latest)
+            return
         return latest + 1
 
     def _latest_completed_iteration(self) -> int | None:

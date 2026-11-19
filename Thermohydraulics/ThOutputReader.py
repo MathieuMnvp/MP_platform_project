@@ -1,71 +1,60 @@
-import os
-import sys
-from Thermohydraulics.openfoam.OpenFOAMOutputReader import OpenFOAMOutputReader
+from __future__ import annotations
 
-openfoam = OpenFOAMOutputReader()
+import logging
+from dataclasses import dataclass, field
+from pathlib import Path
+
+from Thermohydraulics.openfoam.OpenFOAMOutputReader import OpenFOAMOutputReader
 
 __all__ = ["ThOutputReader"]
 
+logger = logging.getLogger(__name__)
+
+CONFIG_FILENAME = "config.json"
+
+@dataclass
 class ThOutputReader:
+    iteration: int = 0
+    casename: str = "default"
+    scenario: str = "default"
+    thermo_code: str = "default"
 
-    def __init__(self):
-        #Variables
-        self._scenario = "default"
-        self._iteration = 0
-        self._thermo_code = "default"
-        self._casename = "default"
-
-    @property
-    def scenario(self):
-        return self._scenario
-
-    @scenario.setter
-    def scenario(self, value):
-        self._scenario = value 
+    opemfoam_output: OpenFOAMOutputReader = field(default_factory=OpenFOAMOutputReader)
 
     @property
-    def iteration(self):
-        return self._iteration
-
-    @iteration.setter
-    def iteration(self, value):
-        self._iteration = value
-
-    @property
-    def thermo_code(self):
-        return self._thermo_code
-
-    @thermo_code.setter
-    def thermo_code(self, value):
-        self._thermo_code = value
-
-    @property
-    def casename(self):
-        return self._casename
-
-    @casename.setter
-    def casename(self, value):
-        self._casename = value
+    def scenario_dir(self) -> Path:
+        return Path.cwd() / "Scenarios" / self.scenario
 
     @property
     def results_dir(self):
-        return os.path.join(os.getcwd(), "Results", self.casename, str(self.iteration), "Thermohydraulics")
+        return Path.cwd() / "Results" / self.casename / str(self.iteration) / "Thermohydraulics"
     
     @property
     def output_dir(self):
-        return os.path.join(os.getcwd(), "Results", self.casename, str(self.iteration), "TH_output.csv")
+        return Path.cwd() / "Results" / self.casename / str(self.iteration) / "TH_output.csv")
 
-    def main(self):
-        if self.thermo_code == "openfoam":
-            openfoam.scenario = self.scenario
-            openfoam.casename = self.casename
-            openfoam.iteration = self.iteration
-            openfoam.main()
+    @property
+    def config_path(self) -> Path:
+        return self.scenario_dir / CONFIG_FILENAME
 
-if __name__ == "__main__":
-    try:
-        ThOutputReader().main()
-    except Exception as e:
-        print(f"[ERROR] {e}", file=sys.stderr)
-        sys.exit(1)
+    def main(self) -> None:
+        readers = {
+            "openmc": self._read_openfoam,
+        }
+        try:
+            read = readers[self.thermo_code]
+        except KeyError:
+            raise ValueError(
+                f"Code thermohydraulique non supporté : {self.thermo_code!r} "
+                f"(supportés : {', '.join(readers)})"
+            ) from None
 
+        logger.info("Lecture des sorties %s (itération %d)",
+                    self.thermo_code, self.iteration)
+        read()
+
+    def _read_openfoam(self) -> None:
+            self.opemfoam_output.scenario = self.scenario
+            self.opemfoam_output.casename = self.casename
+            self.opemfoam_output.iteration = self.iteration
+            self.opemfoam_output.main()

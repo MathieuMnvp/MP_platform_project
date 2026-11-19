@@ -1,74 +1,62 @@
-import os
-import sys
+from __future__ import annotations
+
+import logging
+from dataclasses import dataclass, field
+from pathlib import Path
+
 from Neutronics.openmc.OpenMcInputGenerator import OpenMcInputGenerator
 from Utils.json_utils import json_reader
 
-OMI = OpenMcInputGenerator()
-
 __all__ = ["NeInputGenerator"]
 
+logger = logging.getLogger(__name__)
+
+CONFIG_FILENAME = "config.json"
+
+@dataclass
 class NeInputGenerator:
+    iteration: int = 0
+    casename: str = "default"
+    scenario: str = "default"
+    neutro_code: str = "default"
 
-    def __init__(self):
-        #Variables
-        self._iteration = 0
-        self._casename = "default"
-        self._scenario ="default"
-        self._neutro_code = "default"
-
-    @property
-    def iteration(self):
-        return self._iteration
-
-    @iteration.setter
-    def iteration(self, value):
-        self._iteration = value
+    openmc_input: OpenMcInputGenerator = field(default_factory=OpenMcInputGenerator)
 
     @property
-    def casename(self):
-        return self._casename
-
-    @casename.setter
-    def casename(self, value):
-        self._casename = value 
+    def scenario_dir(self) -> Path:
+        return Path.cwd() / "Scenarios" / self.scenario
 
     @property
-    def neutro_code(self):
-        return self._neutro_code
+    def config_path(self) -> Path:
+        return self.scenario_dir / CONFIG_FILENAME
 
-    @neutro_code.setter
-    def neutro_code(self, value):
-        self._neutro_code = value 
+    def main(self) -> None:
+        readers = {
+            "openmc": self._run_openmc,
+        }
+        try:
+            read = readers[self.neutro_code]
+        except KeyError:
+            raise ValueError(
+                f"Code neutronique non supporté : {self.neutro_code!r} "
+                f"(supportés : {', '.join(readers)})"
+            ) from None
 
-    @property
-    def scenario(self):
-        return self._scenario
+        logger.info("Simulation neutronique %s (itération %d)",
+                    self.neutro_code, self.iteration)
+        read()
 
-    @scenario.setter
-    def scenario(self, value):
-        self._scenario = value 
+    def _load_config(self) -> dict[str, Any]:
+        if not self.config_path.is_file():
+            raise FileNotFoundError(f"Config introuvable : {self.config_path}")
+        return json_reader(str(self.config_path))
 
-    @property
-    def scenario_dir(self):
-        return os.path.join(os.getcwd(), "Scenarios", self.scenario)    
+    def _run_openmc(self) -> None:
+        settings = self._load_config()["openmc"]
 
-    def main(self):
-        self.input_generator()
-    
-    def input_generator(self):
-        if self.neutro_code == "openmc":
-            config_file = os.path.join(self.scenario_dir, "config.json")
-            data = json_reader(config_file)
-            OMI.batches = data["openmc"]["batches"]
-            OMI.inactive = data["openmc"]["inactive"]
-            OMI.scenario = self.scenario
-            OMI.casename = self.casename
-            OMI.iteration = self.iteration
-            OMI.main()
-
-if __name__ == "__main__":
-    try:
-        NeInputGenerator().main()
-    except Exception as e:
-        print(f"[ERROR] {e}", file=sys.stderr)
-        sys.exit(1)
+        self.openmc_input.batches = settings["batches"]
+        self.openmc_input.inactive = settings["inactive"]
+        self.openmc_input.scenario = self.scenario
+        self.openmc_input.casename = self.casename
+        self.openmc_input.iteration = self.iteration
+        self.openmc_input.main()

@@ -1,59 +1,27 @@
-import openmc
+from __future__ import annotations
+from dataclasses import dataclass, field
+from pathlib import Path
 import numpy as np
 import os
 import time
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+
+import openmc
+
 from IPython.display import Image
 from Utils.json_utils import json_reader
 import xml.etree.ElementTree as ET
 
 __all__ = ["OpenMcOutputReader"]
 
+@dataclass
 class OpenMcOutputReader:
-
-    def __init__(self):
-
-        #Variables
-        self._batches = 300
-        self._iteration = 0
-        self._scenario = "default"
-        self._casename = "default"
-
-    @property
-    def batches(self):
-        return self._batches
-
-    @batches.setter
-    def batches(self, value):
-        if value <= 0:
-            raise ValueError("batches must be > 0")
-        self._batches = value
-
-    @property
-    def iteration(self):
-        return self._iteration
-
-    @iteration.setter
-    def iteration(self, value):
-        self._iteration = value
-
-    @property
-    def casename(self):
-        return self._casename
-
-    @casename.setter
-    def casename(self, value):
-        self._casename = value
-
-    @property
-    def scenario(self):
-        return self._scenario
-
-    @scenario.setter
-    def scenario(self, value):
-        self._scenario = value
+    batches: int = 300
+    iteration: int = 0
+    scenario: str = "default"
+    casename: str = "default"
 
     @property
     def output_dir(self):
@@ -67,7 +35,7 @@ class OpenMcOutputReader:
     def scenario_dir(self):
         return os.path.join(os.getcwd(), "Scenarios", self.scenario) 
 
-    def main(self):
+    def main(self) -> None:
     
         start=time.time()
 
@@ -152,7 +120,7 @@ class OpenMcOutputReader:
         n = self.batches
 
         with openmc.StatePoint(os.path.join(results_dir, f"statepoint.{n}.h5"), autolink=False) as sp: 
-            tally = sp.get_tally(name=f'heating_per_cell{iteration}')
+            tally = sp.get_tally(name=f'kappa_fission_per_cell{iteration}')
             tally_power = tally.mean.ravel()
             tally_std_dev = tally.std_dev.ravel()
             tally_id =  tally.filters[0].bins

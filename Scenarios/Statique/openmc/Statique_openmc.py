@@ -45,8 +45,8 @@ class OpenMCInput:
         #Variables
         self._NN = 24 #Number of nodes
         self._batches = 200
-        self._inactive = 100
-        self._particles = 100000
+        self._inactive = 50
+        self._particles = 50000
         self._iteration = 0
         self._casename = "default"
 
@@ -124,8 +124,6 @@ class OpenMCInput:
         results_dir = self.results_dir
         output_dir = self.output_dir
         iteration = self.iteration
-
-        print("Simulation NE en cours...")
 
         os.makedirs(results_dir, exist_ok=True)
         if iteration == 1:
@@ -312,9 +310,9 @@ class OpenMCInput:
 
         mesh_filter = openmc.MeshFilter(mesh)
 
-        tally = openmc.Tally(name=f"heating_per_cell{iteration}")
+        tally = openmc.Tally(name=f"kappa_fission_per_cell{iteration}")
         tally.filters = [mesh_filter]
-        tally.scores = ["heating"]
+        tally.scores = ["kappa-fission"]
         openmc.Tallies([tally]).export_to_xml(results_dir)
 
     def settings_creation(self, mesh):
@@ -338,13 +336,14 @@ class OpenMCInput:
         src = openmc.IndependentSource()
         src.space  = openmc.stats.Box((AG, AG, 0.0), (CP*17+AG, CP*17+AG, AH), only_fissionable=True)
         src.angle  = openmc.stats.Isotropic()
-        settings.source = src
+        openmc.FileSource("source.h5")
  
         self.settings = settings
         settings._batches = batches
         settings._inactive = inactive
         settings._particles = particles
         settings.summary = False
+        settings.seed = 1000000007
         settings.export_to_xml(results_dir)
 
     def geometry_plot(self):

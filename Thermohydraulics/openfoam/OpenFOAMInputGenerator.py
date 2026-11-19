@@ -61,10 +61,7 @@ class OpenFOAMInputGenerator:
         print(f"Calcul TH terminé en {round(end-start, 0)}s")
 
     def copy_reference(self, results_dir, iteration):
-        if iteration == 1:
-            src_dir = os.path.join(os.getcwd(), "Scenarios", self.scenario, "openfoam", f"{self.scenario}_openfoam_1st_iteration")
-        else:
-            src_dir = os.path.join(os.getcwd(), "Scenarios", self.scenario, "openfoam", f"{self.scenario}_openfoam_next_iteration")
+        src_dir = os.path.join(os.getcwd(), "Scenarios", self.scenario, "openfoam", f"{self.scenario}_openfoam")
         shutil.copytree(src_dir, results_dir)        
 
     def run_simulation(self, results_dir):

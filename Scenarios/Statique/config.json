@@ -1,19 +1,23 @@
 {
   "scenario": "Statique",
-  "processors": 16,
+  "processors": 32,
   "coupling" : "GaussSeidel",
   "coupling_dependant" : {
     "starting_iteration" : 1,
-    "total_iteration" : 15
+    "total_iteration" : 30
   },
   "neutronics": "openmc",
   "thermohydraulics": "openfoam",
   "openmc": {
     "particules": null,
-    "batches": 150,
-    "inactive": 30
+    "batches": 200,
+    "inactive": 50
   },
   "openfoam": {
   },
-  "power" : 6.14035e6
+  "power" : 6.14035e6,
+  "convergence": {
+    "CONVERGENCE_THRESHOLD": 1.0,
+    "MARGIN_FACTOR": 1.05
+  }
 }

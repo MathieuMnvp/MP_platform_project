@@ -1,77 +1,62 @@
-import os
-import sys
-from Utils.json_utils import json_reader
-from Neutronics.openmc.OpenMcOutputReader import OpenMcOutputReader
+from __future__ import annotations
 
-OOR = OpenMcOutputReader()
+import logging
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+from Neutronics.openmc.OpenMcOutputReader import OpenMcOutputReader
+from Utils.json_utils import json_reader
 
 __all__ = ["NeOutputReader"]
 
+logger = logging.getLogger(__name__)
+
+CONFIG_FILENAME = "config.json"
+
+@dataclass
 class NeOutputReader:
-
-    def __init__(self):
-        #Variables
-        self._iteration = 0
-        self._casename = "default"
-        self._scenario ="default"
-        self._neutro_code = "default"
-
-    @property
-    def iteration(self):
-        return self._iteration
-
-    @iteration.setter
-    def iteration(self, value):
-        self._iteration = value
-
-    @property
-    def casename(self):
-        return self._casename
-
-    @casename.setter
-    def casename(self, value):
-        self._casename = value 
-
-    @property
-    def neutro_code(self):
-        return self._neutro_code
-
-    @neutro_code.setter
-    def neutro_code(self, value):
-        self._neutro_code = value 
-
-    @property
-    def scenario(self):
-        return self._scenario
-
-    @scenario.setter
-    def scenario(self, value):
-        self._scenario = value 
-
-    @property
-    def scenario_dir(self):
-        return os.path.join(os.getcwd(), "Scenarios", self.scenario)    
-
-    def main(self):
-        self.output_reader()
-
-    def get_config_data(self):
-        config_file = os.path.join(self.scenario_dir, "config.json")
-        data = json_reader(config_file)
-        return data
+    iteration: int = 0
+    casename: str = "default"
+    scenario: str = "default"
+    neutro_code: str = "default"
     
-    def output_reader(self):
-        data = self.get_config_data()
-        if self.neutro_code == "openmc":
-            OOR.batches = data["openmc"]["batches"]
-            OOR.scenario = self.scenario
-            OOR.casename = self.casename
-            OOR.iteration = self.iteration
-            OOR.main()
+    openmc_output: OpenMcOutputReader = field(default_factory=OpenMcOutputReader)
 
-if __name__ == "__main__":
-    try:
-        NeOutputReader().main()
-    except Exception as e:
-        print(f"[ERROR] {e}", file=sys.stderr)
-        sys.exit(1)
+    @property
+    def scenario_dir(self) -> Path:
+        return Path.cwd() / "Scenarios" / self.scenario
+
+    @property
+    def config_path(self) -> Path:
+        return self.scenario_dir / CONFIG_FILENAME
+
+    def main(self) -> None:
+        readers = {
+            "openmc": self._read_openmc,
+        }
+        try:
+            read = readers[self.neutro_code]
+        except KeyError:
+            raise ValueError(
+                f"Code neutronique non supporté : {self.neutro_code!r} "
+                f"(supportés : {', '.join(readers)})"
+            ) from None
+
+        logger.info("Lecture des sorties %s (itération %d)",
+                    self.neutro_code, self.iteration)
+        read()
+
+    def _load_config(self) -> dict[str, Any]:
+        if not self.config_path.is_file():
+            raise FileNotFoundError(f"Config introuvable : {self.config_path}")
+        return json_reader(str(self.config_path))
+
+    def _read_openmc(self) -> None:
+        settings = self._load_config()["openmc"]
+
+        self.openmc_output.batches = settings["batches"]
+        self.openmc_output.scenario = self.scenario
+        self.openmc_output.casename = self.casename
+        self.openmc_output.iteration = self.iteration
+        self.openmc_output.main()

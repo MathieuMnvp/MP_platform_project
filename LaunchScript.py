@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from Coupling.MainCoupling import MainCoupling
 from Utils.JSON_server import JSON_server
 from Utils.Tee import Tee
@@ -7,7 +10,7 @@ JS = JSON_server()
 
 ###########################
 
-casename = "Asmb_REP_test_validation"
+casename = "Kolmogorov-Smirnov"
 scenario = "Statique"
 
 ###########################
@@ -19,7 +22,17 @@ MCG.casename = casename
 MCG.scenario = scenario
 
 with Tee("log.txt"):
-    print("Simulation start")
-    MCG.main(restart=False)
+    logging.basicConfig(
+        level=logging.INFO,          # niveau par défaut : bibliothèques en INFO
+        format="%(asctime)s [%(levelname)s] %(name)s : %(message)s",
+        datefmt="%H:%M:%S",
+        stream=sys.stdout,
+        force=True,
+    )
+
+    for pkg in ("Coupling", "Utils", "__main__", "pandas"):
+        logging.getLogger(pkg).setLevel(logging.DEBUG)
+
+    MCG.main(restart=True)
 
 #Pour repartir de la dernière itération de la simulation "casename", utiliser restart=True

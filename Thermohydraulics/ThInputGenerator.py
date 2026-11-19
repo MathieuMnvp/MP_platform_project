@@ -1,72 +1,52 @@
-import os
-import sys
-from Thermohydraulics.openfoam.OpenFOAMInputGenerator import OpenFOAMInputGenerator
+from __future__ import annotations
 
-openfoam = OpenFOAMInputGenerator()
+import logging
+from dataclasses import dataclass, field
+from pathlib import Path
+
+from Thermohydraulics.openfoam.OpenFOAMInputGenerator import OpenFOAMInputGenerator
 
 __all__ = ["ThInputGenerator"]
 
+logger = logging.getLogger(__name__)
+
+CONFIG_FILENAME = "config.json"
+
+@dataclass
 class ThInputGenerator:
+    iteration: int = 0
+    casename: str = "default"
+    scenario: str = "default"
+    thermo_code: str = "default"
 
-    def __init__(self):
-
-        #Parameters
-        #Variables
-        self._iteration = 0
-        self._casename = "default"
-        self._thermo_code = "default"
-        self._scenario = "default"
+    openfoam_input: OpenFOAMInputGenerator = field(default_factory=OpenFOAMInputGenerator)
 
     @property
-    def iteration(self):
-        return self._iteration
-
-    @iteration.setter
-    def iteration(self, value):
-        self._iteration = value
+    def results_dir(self) -> Path:
+        return Path.cwd() / "Results" / self.casename / str(self.iteration) / "Thermohydraulics"
 
     @property
-    def casename(self):
-        return self._casename
+    def scenario_dir(self) -> Path:
+        return Path.cwd() / "Scenarios" / self.scenario   
 
-    @casename.setter
-    def casename(self, value):
-        self._casename = value
+    def main(self) -> None:
+        readers = {
+            "openmc": self._run_openfoam,
+        }
+        try:
+            read = readers[self.thermo_code]
+        except KeyError:
+            raise ValueError(
+                f"Code thermohydraulique non supporté : {self.thermo_code!r} "
+                f"(supportés : {', '.join(readers)})"
+            ) from None
 
-    @property
-    def thermo_code(self):
-        return self._thermo_code
+        logger.info("Simulation thermohydraulique %s (itération %d)",
+                    self.thermo_code, self.iteration)
+        read()
 
-    @thermo_code.setter
-    def thermo_code(self, value):
-        self._thermo_code = value
-
-    @property
-    def scenario(self):
-        return self._scenario
-
-    @scenario.setter
-    def scenario(self, value):
-        self._scenario = value 
-
-    @property
-    def results_dir(self):
-        return os.path.join(os.getcwd(), "Results", self.casename, str(self.iteration), "Thermohydraulics")
-
-    @property
-    def scenario_dir(self):
-        return os.path.join(os.getcwd(), "Scenarios", self.scenario)   
-
-    def main(self):
-        if self.thermo_code == "openfoam":
-            openfoam.scenario = self.scenario
-            openfoam.casename = self.casename
-            openfoam.iteration = self.iteration
-            openfoam.main()
-
-if __name__ == "__main__":
-    try:
-        ThInputGenerator().main()
-    except Exception as e:
-        print(f"[ERROR] {e}", file=sys.stderr)
-        sys.exit(1)
+    def _run_openfoam(self) -> None:
+            self.openfoam_input.scenario = self.scenario
+            self.openfoam_input.casename = self.casename
+            self.openfoam_input.iteration = self.iteration
+            self.openfoam_input.main()

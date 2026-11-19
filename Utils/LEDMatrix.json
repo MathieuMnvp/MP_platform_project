@@ -1,7 +1,7 @@
 {
-  "casename": "Asmb_REP_test_validation",
+  "casename": "Kolmogorov-Smirnov",
   "scenario": "Statique",
-  "iteration": 1,
+  "iteration": 17,
   "time_step": null,
   "physics": "neutronics",
   "neutronics": "openmc",
@@ -14,10 +14,10 @@
     "timestep": null
   },
   "resources": {
-    "timestamp": "2026-09-02T21:48:52.797447",
+    "timestamp": "2026-11-18T15:52:45",
     "system": {
-      "cpu_percent": 100.0,
-      "ram_used": 2.2
+      "cpu_percent": 81.9,
+      "ram_used": 2.8
     }
   }
 }

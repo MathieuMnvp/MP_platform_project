@@ -161,9 +161,6 @@ class OpenFOAMOutputReader:
             xy_list.clear()
 
         plt.clf()
-        print(f"DEBUG: len(z_values) = {len(z_values)}, len(z_list) = {len(z_list)}")
-        print(z_list)
-        print(z_values)
         plt.plot(z_values, z_list, marker="o", linestyle="-")
 
         plt.xlabel("Nodes")

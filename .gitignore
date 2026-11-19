@@ -1,5 +1,4 @@
 Results/
-output/
 *.vtk
 *.vtu
 *.h5
@@ -14,5 +13,6 @@ venv/
 .idea/
 *.log
 polyMesh/
-.gitignore
 log.txt
+FIX.md
+opencode.json

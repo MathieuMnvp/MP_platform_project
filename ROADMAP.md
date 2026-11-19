@@ -15,11 +15,15 @@ Cette feuille de route détaille l'état actuel et les futurs développements de
 ## 🟡 Phase 1 : Robustesse, Automatisation et Qualité (D'ici Nov/Déc 2026)
 *Objectif : Rendre le code autonome, fiable et "pro".*
 
-- [ ] **Critères de convergence :** Ajouter la vérification de la convergence dans la boucle Gauss-Seidel (sur la puissance, température, etc.) pour arrêter le calcul au bon moment.
+- [o] **Critères de convergence :** Ajouter la vérification de la convergence dans la boucle Gauss-Seidel (sur la puissance, température, etc.) pour arrêter le calcul au bon moment.
 - [ ] **Automatisation des I/O :** Automatiser à 100% la lecture des fichiers de sortie des deux codes (zéro modification manuelle, pilotage exclusif via le `config.json` du scénario).
-- [O] **Reprise de calcul (Restart) :** Implémenter l'argument `restart=True` pour relancer un calcul interrompu sans manipulation humaine.
+- [o] **Reprise de calcul (Restart) :** Implémenter l'argument `restart=True` pour relancer un calcul interrompu sans manipulation humaine.
 - [ ] **Francisation :** Traduire l'intégralité des commentaires du code en français.
 - [ ] **Qualité du code ("Professionnalisation") :** Refactoriser le code (découpage en fonctions/classes propres, gestion des erreurs, standardisation du formatage).
+
+Fichiers à retravailler: 
+
+-Thermohydraulics (4 fichiers au total)
 
 ---
 

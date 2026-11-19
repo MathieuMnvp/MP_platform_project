@@ -69,7 +69,7 @@ powerRamp
             const scalar xmin = 0.0004035, xmax = 0.2149095;
             const scalar ymin = 0.0004035, ymax = 0.2149095;
             const scalar zmin = 0.0,       zmax = 2.005613;
-            const label  nx = 17, ny = 17, nz = 24;
+            const label  nx = 34, ny = 34, nz = 24;
 
             const scalar dx = (xmax - xmin)/nx;
             const scalar dy = (ymax - ymin)/ny;
